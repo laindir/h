@@ -2,7 +2,7 @@
 
 SECTIONS=3,2,9,1,8
 
-man -e '' -s $SECTIONS "$1" | awk -v arg1="$1" '
+man -e '' -S $SECTIONS "$1" | awk -v arg1="$1" '
 BEGIN {
 	arg1 = "[ *]" arg1 " ?\\(|[ *]" arg1 "$";
 }
